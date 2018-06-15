@@ -12,6 +12,20 @@ Tip: Investigar el evento window.onload
     <title></title>
   </head>
   <body>
-
+  	<img src="https://source.unsplash.com/800x400/?flowers,cherry" alt="">
+  	<img src="https://source.unsplash.com/800x400/?child,candy" alt="">
+  	<img src="https://source.unsplash.com/800x400/?nature,flowers" alt="">
+  	<img src="https://source.unsplash.com/800x400/?nature,kids" alt="">
+  	<img src="https://source.unsplash.com/800x400/?nature,water" alt="">
+  	<img src="https://source.unsplash.com/800x400/?baby,boy" alt="">
+  <script src="../js/jquery-3.3.1.min.js"></script>
+  <script>
+  	$(document).ready(function(){
+  	alert("DOM ready!");	
+  	});
+    $( window ).on( "load", function() {
+        alert( "Imagenes Cargadas!" );
+    });
+  </script>
   </body>
 </html>

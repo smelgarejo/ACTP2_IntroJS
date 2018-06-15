@@ -1,19 +1,34 @@
 <!-- Crear una galería de imágenes
-
 Todas las imágenes deben estar desaturada (en blanco y negro)
 ver: https://stackoverflow.com/questions/22994810/how-do-i-desaturate-and-saturate-an-image-using-css
-
 Al hacer click sobre la imágen esta debe recuperar su color con una transición
 de un segundo, al volver hacer click debe volver a estar en blanco y negro.
 -->
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+</head>
+<body>
+	<img src="https://source.unsplash.com/800x400/?flowers,cherry" alt="">
+	<img src="https://source.unsplash.com/800x400/?child,candy" alt="">
+	<img src="https://source.unsplash.com/800x400/?nature,flowers" alt="">
+	<img src="https://source.unsplash.com/800x400/?nature,kids" alt="">
+	<img src="https://source.unsplash.com/800x400/?nature,water" alt="">
+	<img src="https://source.unsplash.com/800x400/?baby,boy" alt="">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('img').css('filter','grayscale(100%)');
+			$('img').css('transición','all 1s');
 
-  </body>
+			$('img').click(function(evt){
+				console.log(evt.currentTarget);
+				$('img').css('filter','grayscale(100%)');
+				$(evt.currentTarget).css('filter','grayscale(0%)');
+			});
+		});
+	</script>
+</body>
 </html>
